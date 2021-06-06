@@ -1,0 +1,35 @@
+@import "fonts";
+@import "color";
+
+h1 {
+  @include playfair('black',32px);
+  color: #fff;
+}
+
+h2 {
+  @include playfair('bold',22px);
+  text-transform: uppercase;
+  line-height: 22px;
+  color: $black;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+h3 {
+  @include roboto('black',14px);
+  color: $black;
+  text-transform: uppercase;
+}
+
+p {
+  @include roboto('light',14px);
+  line-height: 22px;
+  color: $black;
+  letter-spacing: 1px;
+}
+
+.description {
+  color:#fafafa;
+  text-transform: uppercase;
+  @include roboto('light',13px);
+}

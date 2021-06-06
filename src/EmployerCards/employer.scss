@@ -1,0 +1,30 @@
+@import "src/styles/color";
+
+.default-image {
+  height: 200px;
+  min-width: 200px;
+  background-color: #fff;
+}
+
+.employer-wrap {
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid $black;
+  padding-bottom: 1rem;
+
+  p {
+    color:#fafafa;
+    font-size: 13px;
+    letter-spacing: 0;
+  }
+  h3 {
+    margin-top: 1rem;
+    color: #fff;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .employer-wrap {
+    margin-bottom: 1rem;
+  }
+}

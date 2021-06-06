@@ -1,0 +1,6 @@
+each val,key in [{name:'semf ucuk', position:'CEO & FOUNDER'},{name:'dik adalin', position:'engineering'}, {name:'jeng kol',position: 'designer'},{name: 'pet romak',position: 'marketing'}]
+    .col(key=key)
+        .employer-wrap
+            .default-image
+            h3= val.name
+            .description val.position

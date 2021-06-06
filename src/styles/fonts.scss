@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Playfair+Display:wght@400;700;900&family=Roboto:wght@100;300;900&display=swap');
+
+@mixin roboto($wght,$size) {
+  font-family: 'Roboto', sans-serif;
+  @if ($wght == 'thin') {
+    font-weight: 100;
+  } @else if($wght == 'light') {
+    font-weight: 300;
+  } @else if($wght == 'black') {
+    font-weight: 900;
+  }
+  font-size: $size;
+}
+
+@mixin playfair($wght,$size) {
+  font-family: 'Playfair Display', serif;
+  @if($wght == 'regular') {
+    font-weight: 400;
+  } @else if($wght == 'bold') {
+    font-weight: 700;
+  } @else if($wght == 'black') {
+    font-weight: 900;
+  }
+  font-size: $size;
+}
+
+@mixin hammersmithone($size) {
+  font-family: 'Hammersmith One', sans-serif;
+  font-weight: 400;
+  font-size: $size;
+}
