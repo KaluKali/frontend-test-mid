@@ -1,7 +1,7 @@
-@each $image in ("icon" "play" "../images/play.png" 37px 45px),
+@each $image in
         ("img" "logo" "../images/logo.png" 235px 229px),
         ("icon" "logo" "../images/logo-out.png" 44px 50px),
-
+         //("icon" "play" "../images/play.png" 37px 45px),
         //("icon" "design" "../images/design.png" 49px 50px),
         //("icon" "game" "../images/game.png" 41px 50px),
         //("icon" "love" "../images/love.png" 50px 50px),
@@ -38,7 +38,7 @@
 
 .icon-love {
   width: 50px;
-  height: 46px;
+  height: 50px;
   background:url("../images/sprite.png") -56px -65px;
 }
 

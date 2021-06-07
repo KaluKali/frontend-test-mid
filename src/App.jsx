@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import './styles/app.scss';
-import Header, {Logo} from "./Header";
-import {Col, Container, InputGroup, Modal, Row} from "react-bootstrap";
+import Header from "./Header";
+import {Col, Container, Row} from "react-bootstrap";
 import PrimaryButton from "./PrimaryButton";
 import EmployerCards from "./EmployerCards";
 import {MdKeyboardArrowRight} from "@react-icons/all-files/md/MdKeyboardArrowRight";
@@ -11,26 +11,18 @@ import face2 from './images/2-face.png'
 import face3 from './images/3-face.png'
 import face4 from './images/4-face.png'
 import face5 from './images/5-face.png'
-import {AiOutlinePhone} from "@react-icons/all-files/ai/AiOutlinePhone";
-import {FaTelegramPlane} from "@react-icons/all-files/fa/FaTelegramPlane";
-import {FaFacebookF} from "@react-icons/all-files/fa/FaFacebookF";
-import {FaTwitter} from "@react-icons/all-files/fa/FaTwitter";
-import {BiBasketball} from "@react-icons/all-files/bi/BiBasketball";
-import {FaInstagram} from "@react-icons/all-files/fa/FaInstagram";
-import {AiOutlineGooglePlus} from "@react-icons/all-files/ai/AiOutlineGooglePlus";
-import {FaYoutube} from "@react-icons/all-files/fa/FaYoutube";
-import {FaMapMarkerAlt} from "@react-icons/all-files/fa/FaMapMarkerAlt";
 import {useWindowSize} from "./useWindowSize";
-import {IoClose} from "@react-icons/all-files/io5/IoClose";
 import {Mentions} from "./Mentions";
 import {IoIosArrowDown} from "@react-icons/all-files/io/IoIosArrowDown";
 import {IoIosArrowUp} from "@react-icons/all-files/io/IoIosArrowUp";
+import VideoModal from "./VideoModal";
+import Footer from "./components/Footer";
 
 function App() {
-    const [videoModal,setVideoModal] = useState(false);
     const [openMentions, setMentions] = useState(false)
-
+    const [videoModal,setVideoModal] = useState(false);
     const size = useWindowSize();
+
 
     const onClickPlay = () => {
         setVideoModal(true)
@@ -59,11 +51,11 @@ function App() {
             </div>
             <div className={'wrapper-2 pt-5 pb-5'}>
                 <Container className={'full-h-center'}>
-                    <Row>
+                    <Row xs={1} sm={2}>
                         <Col>
                             <div className={'img-logo'} />
                         </Col>
-                        <Col sm={8}>
+                        <Col>
                             <h2>our story</h2>
                             <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus.</p>
                             <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
@@ -96,7 +88,7 @@ function App() {
                             {name:'love', title:'made love', content: 'This is Photoshop\'s version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.'}]
                             .map((item,idx)=>(
                                 <Col key={`item-expertise-${idx}`}>
-                                    <div className={'d-flex flex-column align-items-center justify-content-center min-px-150'}>
+                                    <div className={'d-flex flex-column align-items-center justify-content-center mb-3'}>
                                         <div className={`icon-${item.name}`}/>
                                         <h3>{item.title}</h3>
                                         <p>{item.content}</p>
@@ -107,10 +99,10 @@ function App() {
                                 ? idx/3 > 1
                                     ? <React.Fragment key={`row-expertise-${idx}`}>
                                         <hr />
-                                        <Row>
+                                        <Row xs={1} sm={3}>
                                             {arr.slice(idx-2,idx+1)}
                                         </Row></React.Fragment>
-                                    : <Row key={`row-expertise-${idx}`}>
+                                    : <Row xs={1} sm={3} key={`row-expertise-${idx}`}>
                                         {arr.slice(idx-2,idx+1)}
                                     </Row>
                                 : null)
@@ -125,7 +117,7 @@ function App() {
                             <p>Lorem ipsum dolor sit amet proin gravida nibh vel velit</p>
                             <hr className={'divider'} />
                         </div>
-                        <Row className={'mb-5'}>
+                        <Row className={'mb-5'} xs={1} sm={2} md={2} lg={4}>
                             <EmployerCards />
                         </Row>
                         <Row>
@@ -224,60 +216,8 @@ function App() {
                     </Row>
                 </Container>
             </div>
-            <div className={'wrapper-9'}>
-                <div className={'wrapper-9__overlay pt-5 pb-5'}>
-                    <Container>
-                        <Row>
-                            <Col className={'justify-content-start logo-content'}>
-                                <Logo />
-                                <p>lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh elit. Duis sed odio sit amet auctror a ornare odio non mauris vitae erat in elit</p>
-                            </Col>
-                            <Col className={'justify-content-start studios'}>
-                                <h3>our studio</h3>
-                                <div className={'d-flex align-items-start'}>
-                                    <FaMapMarkerAlt size={25}/>
-                                    Ruko cucruk, Jl. Radio luar dalem jos No.12 - 13, Kalideres - Jakarta Barat
-                                    11480 - Indonesia
-                                </div>
-                                <div className={'d-flex align-items-center'}>
-                                    <AiOutlinePhone />
-                                    (+62) 21-2224 3333
-                                </div>
-                            </Col>
-                            <Col className={'justify-content-start social'}>
-                                <h3>stay in touch</h3>
-                                <InputGroup>
-                                    <input type="text" className="form-control" placeholder="Subscribe our newsletter"
-                                           aria-describedby="addon1"/>
-                                    <button className="btn btn-outline-secondary" type="button"><FaTelegramPlane /></button>
-                                </InputGroup>
-                                <div className={'d-flex social-links'}>
-                                    <div className={'circle'}><FaFacebookF /></div>
-                                    <div className={'circle'}><FaTwitter /></div>
-                                    <div className={'circle'}><BiBasketball /></div>
-                                    <div className={'circle'}><FaInstagram /></div>
-                                    <div className={'circle'}><AiOutlineGooglePlus /></div>
-                                    <div className={'circle'}><FaYoutube /></div>
-                                </div>
-                            </Col>
-                        </Row>
-                        <Row>
-                        </Row>
-                    </Container>
-                </div>
-            </div>
-            <Modal show={videoModal} onHide={onClosePlay} centered>
-                <Modal.Header closeLabel={'close-video'}>
-                    <Modal.Title>Video</Modal.Title>
-                    <PrimaryButton onClick={onClosePlay} label={'close-video'}><IoClose/></PrimaryButton>
-                </Modal.Header>
-                <Modal.Body>
-                    <iframe width={'100%'} height={size.height/2} src="https://www.youtube.com/embed/KvUgaHTNit4"
-                            title="YouTube video player" frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen />
-                </Modal.Body>
-            </Modal>
+            <Footer />
+            <VideoModal open={videoModal} onClose={onClosePlay} />
         </>
     );
 }
