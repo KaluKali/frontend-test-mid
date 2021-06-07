@@ -50,7 +50,6 @@ module.exports = merge(baseConfig, {
         collapseWhitespace: true,
         removeAttributeQuotes: true,
       },
-      // necessary to consistently work with multiple chunks via CommonsChunkPlugin
       chunksSortMode: "auto",
     }),
     new HtmlWebpackPlugin({
