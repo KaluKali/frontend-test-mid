@@ -1,3 +1,3 @@
-# Getting Started with Create React App
+# Tajam
 
-Tajam test site
+Test site
