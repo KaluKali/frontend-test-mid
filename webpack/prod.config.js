@@ -32,12 +32,6 @@ module.exports = merge(baseConfig, {
         },
       },
     },
-    minimizer: [
-      // new OptimizeCSSAssetsPlugin({}),
-      // in case you got a minified error #307, just remove uglify js
-      // problems may occur when using react hooks
-      // new UglifyJsPlugin()
-    ],
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -60,6 +54,7 @@ module.exports = merge(baseConfig, {
         removeComments: true,
         collapseWhitespace: true,
         removeAttributeQuotes: true,
+        minifyJS:true
       },
       chunksSortMode: "auto",
     }),
@@ -70,6 +65,7 @@ module.exports = merge(baseConfig, {
           to: "",
         },
       ],
-    })
+    }),
+    new OptimizeCSSAssetsPlugin({})
   ],
 });

@@ -1,0 +1,13 @@
+@import "src/styles/utils";
+@import "../../../styles/const";
+
+
+.ourstory-wrap-container {
+  //@include wrap-content(auto,#fff,null);
+  display: flex;
+  flex-direction: column;
+
+  h2,p {
+    margin-bottom: 22px;
+  }
+}

@@ -1,13 +1,13 @@
 @each $image in
-        ("img" "logo" "../images/logo.png" 235px 229px),
-        ("icon" "logo" "../images/logo-out.png" 44px 50px),
-         //("icon" "play" "../images/play.png" 37px 45px),
-        //("icon" "design" "../images/design.png" 49px 50px),
-        //("icon" "game" "../images/game.png" 41px 50px),
-        //("icon" "love" "../images/love.png" 50px 50px),
-        //("icon" "mobile" "../images/mobile.png" 28px 50px),
-        //("icon" "opt" "../images/opt.png" 50px 50px),
-        //("icon" "brand" "../images/brand.png" 50px 50px),
+        //("img" "logo" "images/logo.png" 235px 229px),
+        ("icon" "logo" "images/logo-out.png" 44px 50px),
+         //("icon" "play" "images/play.png" 37px 45px),
+        //("icon" "design" "images/design.png" 49px 50px),
+        //("icon" "game" "images/game.png" 41px 50px),
+        //("icon" "love" "images/love.png" 50px 50px),
+        //("icon" "mobile" "images/mobile.png" 28px 50px),
+        //("icon" "opt" "images/opt.png" 50px 50px),
+        //("icon" "brand" "images/brand.png" 50px 50px),
 {
   .#{nth($image,1)}-#{nth($image,2)} {
     background: url("#{nth($image,3)}") no-repeat left top;
@@ -21,42 +21,42 @@
 .icon-brand {
   width: 50px;
   height: 50px;
-  background: url("../images/sprite.png") -5px -5px;
+  background: url("images/sprite.png") -5px -5px;
 }
 
 .icon-design {
   width: 49px;
   height: 50px;
-  background:url("../images/sprite.png") -65px -5px;
+  background:url("images/sprite.png") -65px -5px;
 }
 
 .icon-game {
   width: 41px;
   height: 50px;
-  background:url("../images/sprite.png") -5px -65px;
+  background:url("images/sprite.png") -5px -65px;
 }
 
 .icon-love {
   width: 50px;
   height: 50px;
-  background:url("../images/sprite.png") -56px -65px;
+  background:url("images/sprite.png") -56px -65px;
 }
 
 .icon-mobile {
   width: 28px;
   height: 50px;
-  background:url("../images/sprite.png") -124px -5px;
+  background:url("images/sprite.png") -124px -5px;
 }
 
 .icon-opt {
   width: 50px;
   height: 50px;
-  background:url("../images/sprite.png") -116px -65px;
+  background:url("images/sprite.png") -116px -65px;
 }
 
 .icon-play {
   width: 37px;
   height: 45px;
-  background:url("../images/sprite.png") -5px -125px;
+  background:url("images/sprite.png") -5px -125px;
 }
 

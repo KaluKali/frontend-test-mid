@@ -1,0 +1,13 @@
+@import 'src/styles/fonts';
+@import 'src/styles/const';
+
+.form-input {
+  padding: 8px 0 7px 21px;
+  border: 1px solid #cccccc;
+
+  ::placeholder {
+    @include roboto('light',14px);
+    letter-spacing: 1px;
+    line-height: 0 !important;
+  }
+}

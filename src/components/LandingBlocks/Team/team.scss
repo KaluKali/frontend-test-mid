@@ -1,0 +1,27 @@
+@import "src/styles/utils";
+@import "src/styles/const";
+
+.team-wrap-container {
+  p {
+    color: #ffffff;
+  }
+  h2 {
+    color: #ffffff;
+  }
+  .divider {
+    border-color: $black;
+  }
+  .title-wrap {
+    text-align: center;
+    p {
+      color: #f9f9f9;
+      margin: 0;
+    }
+  }
+  .bottom-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

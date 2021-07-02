@@ -1,0 +1,20 @@
+@import "src/styles/utils";
+@import "../../../styles/const";
+
+.ourworks-wrap-container {
+  .title-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p,h2 {
+      cursor: pointer;
+      margin: 0;
+    }
+  }
+  .projects {
+    background: url("images/items.png") left top;
+    background-size: contain;
+    height: 400px;
+  }
+}

@@ -1,12 +1,9 @@
-@import "../../styles/utils";
+@import "src/styles/utils";
 
 
-.wrapper-9 {
-  @include wrap-content(auto, null, '../../images/9-over.png');
-  &__overlay {
-    @include overlay;
-    text-align: center;
-  }
+.footer-wrap-container {
+  text-align: center;
+
   p,h3,div {
     text-align: left;
     color: #fff;
@@ -15,7 +12,7 @@
     font-size: 15px;
   }
   .logo-content {
-    .logo {
+    [class=logo] {
       margin-bottom: 27px;
     }
   }
@@ -38,12 +35,14 @@
       margin-bottom: 39px;
     }
     .social-links {
+      display: flex;
       margin-top: 27px;
       & > * {
         margin-right: 8px;
       }
       .circle {
-        cursor: pointer;
+        color: unset;
+        text-decoration: none;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -51,7 +50,7 @@
         border-radius: 50%;
         height: 34px;
         width: 34px;
-        transition: transform 0.3s ease;
+        transition: transform .3s ease;
         &:hover {
           transform: translateY(-5px);
         }

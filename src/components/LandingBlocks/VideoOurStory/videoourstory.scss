@@ -1,0 +1,16 @@
+.video-wrap-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+
+  .bottom-text {
+    margin-top: 34px;
+    margin-bottom: 0;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+}

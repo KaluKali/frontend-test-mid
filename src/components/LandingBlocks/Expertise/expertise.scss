@@ -1,0 +1,35 @@
+@import "src/styles/utils";
+@import "src/styles/const";
+
+.expertise-wrap-container {
+  text-align: center;
+
+  .col-padding {
+    padding: 0 30px;
+  }
+
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  h3 {
+    margin-top: 2rem;
+  }
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  hr {
+    margin: 39px 0 39px;
+  }
+
+  .divider {
+    border-color: $black;
+    margin: 18px 0 82px;
+  }
+}

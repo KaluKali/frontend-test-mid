@@ -2,7 +2,7 @@ import React from 'react'
 import {animated, useSpring} from '@react-spring/web'
 
 import {config} from "react-spring";
-import {useHeight} from "./useHeight";
+import {useHeight} from "../../hooks/useHeight";
 
 export const Mentions = ({ open, children }) => {
     const [heightRef, height] = useHeight();

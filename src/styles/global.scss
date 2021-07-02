@@ -1,9 +1,16 @@
 @import "fonts";
-@import "color";
+@import "const";
+
+
+.container {
+  max-width: 960px !important;
+}
+
 
 h1 {
   @include playfair('black',32px);
   color: #fff;
+  word-spacing: 3px;
 }
 
 h2 {
@@ -19,17 +26,34 @@ h3 {
   @include roboto('black',14px);
   color: $black;
   text-transform: uppercase;
+  letter-spacing: .5px;
+  word-spacing: .5px;
 }
 
 p {
   @include roboto('light',14px);
   line-height: 22px;
   color: $black;
-  letter-spacing: 1px;
+  letter-spacing: .5px;
 }
 
 .description {
   color:#fafafa;
   text-transform: uppercase;
   @include roboto('light',13px);
+}
+
+.bottom-description {
+  @include playfair('regular',14px);
+  color: rgba(47, 45, 53, 0.749);
+  letter-spacing: 1px;
+  word-spacing: .5px;
+}
+
+.dummy-t {
+  padding-top: 70px;
+}
+
+.dummy-b {
+  padding-bottom: 70px;
 }

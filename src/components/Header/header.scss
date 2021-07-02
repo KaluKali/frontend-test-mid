@@ -1,0 +1,41 @@
+@import "src/styles/fonts";
+@import "src/styles/const";
+@import "src/styles/sprites";
+
+.app-header {
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  p {
+    @include roboto('thin',30px);
+    background: linear-gradient(0deg, $blue, #4aa3cc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 0 0 12px !important;
+  }
+}
+
+.navbar {
+  & > a {
+    margin-left: 23px;
+  }
+}
+
+.header-nav-link {
+  @include roboto('black',13px);
+  text-transform: uppercase;
+  text-decoration: none;
+  &:link,&:hover,&:visited,&:active {
+    color: #fff;
+  }
+  &__active {
+    @extend .header-nav-link;
+    color: $blue !important;
+  }
+}
